@@ -1,0 +1,24 @@
+name: dasktut
+channels:
+- defaults
+- bokeh
+- conda-forge
+dependencies:
+- matplotlib
+- nbconvert
+- numpy
+- pandas
+- scipy
+- seaborn
+- scikit-learn
+- keras
+- dask
+- dask-ml
+- jupyter
+- jupyterlab
+
+- pip:
+  - tensorboard
+  - isoweek
+  - jupyter-repo2docker
+  - xgboost
