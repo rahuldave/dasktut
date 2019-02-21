@@ -1,6 +1,9 @@
 Commands:
 
 Set up an AWS account and a key.
+
+Alternatively you might want to set up minikube on your machine. Both will take some time.
+
 ```
 pip install awscli
 aws configure
@@ -20,7 +23,18 @@ We'll follow the instructions here:
 
 http://docs.dask.org/en/latest/setup/kubernetes-helm.html
 
+Helm Stuff:
 
+```
+helm init --service-account tiller
+helm version
+helm repo update
+helm install stable/dask
+helm status agile-newt
+helm list
+helm upgrade agile-newt stable/dask -f config.yaml
+helm status agile-newt
+```
 
 Kubernetes Stuff:
 
