@@ -11,7 +11,7 @@ brew tap weaveworks/tap
 brew install weaveworks/tap/eksctl
 ```
 
-More on `eksctl` here
+More on `eksctl` here: https://eksctl.io/
 
 Then we'll create a kubernetes cluster:
 
