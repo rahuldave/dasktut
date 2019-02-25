@@ -72,3 +72,6 @@ kubectl exec -it agile-newt-dask-jupyter-54f86bfdd7-jdb5p -- /bin/bash
 
 Once in, clone this github and watch dask go!
 
+**DELETE CLUSTER**:
+
+`eksctl delete cluster --name=<name> [--region=<region>]`
