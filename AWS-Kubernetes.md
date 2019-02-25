@@ -25,7 +25,6 @@ http://docs.dask.org/en/latest/setup/kubernetes-helm.html
 
 First:
 
-```
 
 Kubernetes Stuff:
 
