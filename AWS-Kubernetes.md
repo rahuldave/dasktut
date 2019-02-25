@@ -23,10 +23,30 @@ We'll follow the instructions here:
 
 http://docs.dask.org/en/latest/setup/kubernetes-helm.html
 
+First:
+
+```
+
+Kubernetes Stuff:
+
+```
+kubectl get nodes
+kubectl --namespace kube-system create sa tiller
+kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
+
+```
+
+Install helm. See the dask link above for how.
+
 Helm Stuff:
 
 ```
 helm init --service-account tiller
+```
+
+Give it 2 minutes
+
+```
 helm version
 helm repo update
 helm install stable/dask
@@ -39,11 +59,14 @@ helm status agile-newt
 Kubernetes Stuff:
 
 ```
-kubectl get nodes
-kubectl --namespace kube-system create sa tiller
-kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
 kubectl get pods
 kubectl get services
+
+```
+
+For more details and a shell you will need a command like this. Your exact pod names will be different..
+
+```
 kubectl get pod agile-newt-dask-jupyter-54f86bfdd7-jdb5p
 kubectl exec -it agile-newt-dask-jupyter-54f86bfdd7-jdb5p -- /bin/bash
 ```
